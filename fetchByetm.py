@@ -1,6 +1,6 @@
 import urllib2
 
-er_sn_in=1-607
+# er_sn_in=1-607
 baseurl = "http://home.alc.co.jp/db/owa/etm_rsch?er_sn_in={num}"
 for i in xrange(607):
     url = baseurl.format(num=i+1)
