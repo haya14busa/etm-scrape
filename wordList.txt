@@ -208,7 +208,7 @@ amateur
 amateurish
 amative
 amatory
-amenity 
+amenity
 amiable
 amicable
 amicably
@@ -218,7 +218,7 @@ amorous
 amorpatriae
 amour
 amorpatriac
-enamor enamour 
+enamor enamour
 enemy
 enmity
 inimical
