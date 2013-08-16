@@ -44,8 +44,8 @@ actuate
 actuator
 agency
 agenda
-agent1
-agent2
+agent
+agent
 agile
 agility
 agitate
@@ -92,8 +92,8 @@ reactive
 reactor
 abreact
 abreaction
-transaction  
-transact  
+transaction
+transact
 aerate
 aeroplane
 aerial
@@ -155,7 +155,7 @@ albescent
 albinism
 albino
 Albion
-alb(s)
+albs
 album
 albumen
 albumin
@@ -174,7 +174,7 @@ allegorical
 allegorize
 allegory
 allergic
-allergy 
+allergy
 allophone
 alto
 alto-cumulus
@@ -646,7 +646,7 @@ bonanza
 bonanzagram
 bonbon
 bonfire
-bonny、-ie
+bonny
 bonus
 bounty
 bountiful
@@ -815,7 +815,7 @@ candidate
 candle
 candlelight
 candlestick
-cando(u)r
+candour
 chandelier
 chandler
 chandlery
@@ -1058,7 +1058,7 @@ succor
 card
 cardboard
 cardcase
-cardsharp(er)
+cardsharper
 carton
 cartoon
 discard
@@ -1096,7 +1096,7 @@ causation
 cause
 excuse
 cage
-cagey、cagy
+cagey
 cave
 caveman
 caverned
@@ -1238,7 +1238,7 @@ centuple
 century
 per cent
 percentage
-centre、center
+center
 central
 centralism
 centralization
@@ -1323,7 +1323,7 @@ panchromatic
 chronic
 chronicle
 chronology
-chronologic(al)
+chronological
 chronometer
 chronometry
 anachronism
@@ -1719,7 +1719,7 @@ accumulative
 accumulator
 alto-cumulus
 cumulate
-cumulative、
+cumulative
 cumuli
 cumulo-cirrus
 cumulo-nimbus
@@ -2297,7 +2297,7 @@ disinterested
 quintessence
 presence
 present
-present2
+present
 presentation
 presently
 proud
@@ -3276,7 +3276,7 @@ epigrammatic
 epigraph
 geography
 glamorous
-glamour/glamor
+glamour
 grammar
 grammatical
 grammarian
@@ -3639,7 +3639,7 @@ intestine
 intimacy
 intimate
 intimately
-intimate2
+intimate
 intimation
 ameliorate
 amelioration
@@ -4021,7 +4021,7 @@ levy
 relief
 relieve
 relevant
-relevance、-cy
+relevance
 irrelevance
 irrelevant
 relievo
@@ -4098,7 +4098,7 @@ lingual
 Linguaphone
 linguist
 linguister
-linguistic(al)
+linguistical
 linguistics
 lip
 lipstick
@@ -4165,12 +4165,12 @@ apology
 apologize
 astrology
 biology
-catalog(ue)
+catalogue
 chronology
 dendrochronology
 dialect
 dialectic
-dialog(ue)
+dialogue
 entomology
 epilogue epilog
 etymology
@@ -4186,7 +4186,7 @@ logo
 ‐logy
 meteorological
 meteorology
-monolog(ue)
+monologue
 mythology
 neology
 paleontology
@@ -4194,7 +4194,7 @@ pathology
 philology
 phrenology
 physiology
-prolog(ue)
+prologue
 psychology
 technology
 theology
@@ -4270,7 +4270,7 @@ luminous
 lunar
 lunatic
 lune
-luster、-tre
+luster
 lustrous
 pellucid
 relucent
@@ -4307,7 +4307,7 @@ postlude
 analysis
 analyst
 analytic
-analyze/lyse
+analyse
 catalysis
 catalyst
 catalyzer
@@ -4999,8 +4999,8 @@ common
 commonly
 commonplace
 communal
-commune1
-commune2
+commune
+commune
 communicate
 communication
 communion
@@ -5213,8 +5213,8 @@ notoriously
 innovate
 innovation
 nova
-novel1
-novel2
+novel
+novel
 novelist
 novelty
 novice
@@ -5419,8 +5419,8 @@ expand
 expanse
 expansion
 expansive
-compact1
-compact2
+compact
+compact
 impact
 impacted
 impinge
@@ -5695,7 +5695,7 @@ compulsion
 compulsory
 dispel
 expel
-expellant、-pellent
+expellant
 expulsion
 expulsive
 impel
@@ -5843,7 +5843,7 @@ philharmonic
 philosophy
 philology
 philosopher
-philosophic(al)
+philosophical
 philosophist
 philosophy
 bibliophile
@@ -5935,7 +5935,7 @@ explorer
 plain
 plan
 plane
-plane2
+plane
 plate
 plateau
 platform
@@ -6278,7 +6278,7 @@ postmeridiem
 postmortem
 postscript
 impotent
-impotence、-cy
+impotence
 impuissant
 omnipotent
 omnipotence
@@ -6292,7 +6292,7 @@ impossibility
 impossible
 potent
 potentate
-potence、-cy
+potence
 potential
 potentiality
 potentialize
@@ -6305,8 +6305,8 @@ deprecate
 imprecate
 imprecation
 pray
-prayer1
-prayer2
+prayer
+prayer
 precarious
 appraisal
 appraise
@@ -6398,7 +6398,7 @@ primarily
 prime
 prime minister
 primer
-primeval、primaeval
+primeval
 primitive
 primogenitor
 primogeniture
@@ -6754,7 +6754,7 @@ rightly
 rigid
 rigidity
 rigidly
-rigor、rigour
+rigor
 rigorous
 rule
 royal
@@ -6845,8 +6845,8 @@ interrupt
 interruption
 irrupt
 irruption
-rout1
-rout2
+rout
+rout
 route
 routine
 rupture
@@ -6870,7 +6870,7 @@ salty
 saltcellar
 salad
 salaried
-salariat(e)
+salariate
 salary
 sauce
 sausage
@@ -6887,12 +6887,12 @@ insult
 insulting
 resile
 resilient
-resilience、-ency
+resilience
 result
 resultant
 resultful
 salient
-salience、-ency
+salience
 salmon
 sally
 saltant
@@ -6906,8 +6906,8 @@ salute
 salvable
 salvage
 salvation
-salve1
-salve2
+salve
+salve
 save
 insane
 insanitary
@@ -6977,9 +6977,9 @@ escalate
 escalation
 escalator
 scalar
-scale1
-scale2
-scale3
+scale
+scale
+scale
 ascend
 ascent
 ascendancy
@@ -7427,7 +7427,7 @@ assistant
 assistance
 consist
 consistent
-consistence、-ency
+consistence
 desist
 exist
 existent
@@ -7627,7 +7627,7 @@ specious
 spectacle
 spectacular
 spectator
-specter、-tre(英）
+specter
 spectrum
 speculate
 speculation
@@ -7687,7 +7687,7 @@ correspondent
 correspondence
 corresponding
 despond
-despondence、-ency
+despondence
 despondent
 espousal
 espouse
@@ -7712,7 +7712,7 @@ circumstantial
 circumstantiate
 consist
 consistent
-consistence、-ency
+consistence
 inconsistency
 inconsistent
 constable
@@ -7762,7 +7762,7 @@ interstate
 metastasis
 metastasize
 obstacle
-obstetric、-rica
+obstetric
 obstinacy
 obstinate
 obstinately
@@ -8335,7 +8335,7 @@ territory
 terrier
 attest
 attestation
-attester、-or
+attester
 contest
 contestant
 detest
@@ -8413,7 +8413,7 @@ tolerant
 tolerate
 toleration
 anatomy
-anatomic、-cal
+anatomic
 atom
 atomic
 entomology
@@ -8448,8 +8448,8 @@ torturous
 tortuous
 torchlight
 torch
-toast1
-toast2
+toast
+toast
 torrefy
 torrent
 torrential
@@ -8557,7 +8557,7 @@ distributor
 distribution
 distributive
 retribution
-retributive、-tory
+retributive
 retributory
 tribal
 tribe
@@ -8643,7 +8643,7 @@ turbidity
 turbinate
 turbine
 turbulent
-turbulence、-enc
+turbulence
 ulterior
 ultimate
 ultimately
@@ -8789,7 +8789,7 @@ valid
 validity
 validate
 validation
-valo(u)r
+valour
 valorous
 value
 invaluable
@@ -9102,7 +9102,7 @@ advice
 advisable
 advise
 advisement
-adviser、sor
+adviser
 envy
 enviable
 envious
@@ -9204,7 +9204,7 @@ vegetable
 vigil
 vigilance
 vigilant
-vigo(u)r
+vigour
 vigorous
 vigorously
 convict
