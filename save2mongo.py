@@ -33,34 +33,40 @@ def getWordsList():
         objFile.close()
     return text.splitlines()
 
-def main():
+def getWordDocList():
     words = getWordsList()
-    word = words[0]
-
-    db = connect2mongodb('mydict')
 
     stemmer = stem.LancasterStemmer()
     lemmatizer = stem.WordNetLemmatizer()
 
-    lword = words[0].lower()
-    lmword = lemmatizer.lemmatize(lword)
-    stword = stemmer.stem(lword)
-    print lmword
+    doclist = []
+    for num, word in enumerate(words):
+        lword  = word.lower()
+        lmword = lemmatizer.lemmatize(lword)
+        stword = stemmer.stem(lword)
 
-    word_doc = {
-            'eword'    : words[0],
-            'alc_etm'  : {
-                            'unum'     : 1,
-                            'er_sn_in' : None
-                         },
-            'lemma'    : lmword,
-            'stem'     : stword,
-            'from'     : 'alc_etm',
-            'created_at'     : datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    }
+        word_doc = {
+                'eword'    : word,
+                'alc_etm'  : {
+                                'unum'     : num+1,
+                                'er_sn_in' : None
+                             },
+                'lemma'    : lmword,
+                'stem'     : stword,
+                'from'     : 'alc_etm',
+                'created_at'     : datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        }
+        doclist.append(word_doc)
+        print num
+    return doclist
 
-    db.words.insert(word_doc, safe=True)
-    print "Successfully inserted document: %s" % word_doc
+def main():
+    db = connect2mongodb('mydict')
+
+    word_docs = getWordDocList()
+
+    db.words.insert(word_docs, safe=True)
+    print "Successfully bulk inserted document"
 
 if __name__ == '__main__':
     main()
