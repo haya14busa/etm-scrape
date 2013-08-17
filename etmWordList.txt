@@ -700,7 +700,7 @@ bonanza
 bonanzagram
 bonbon
 bonfire
-bonny、-ie
+bonny
 bonus
 boon
 boon
@@ -1184,7 +1184,7 @@ cause
 excuse
 [088]
 cage
-cagey、cagy
+cagey
 camera
 cave
 caveman
@@ -1336,7 +1336,7 @@ percentage
 central
 centralism
 centralization
-centre、center
+center
 centricity
 centrifugal
 centripetal
@@ -1841,7 +1841,7 @@ accumulative
 accumulator
 alto-cumulus
 cumulate
-cumulative、
+cumulative
 cumuli
 cumulo-cirrus
 cumulo-nimbus
@@ -4290,7 +4290,7 @@ levitate
 levitation
 levity
 levy
-relevance、-cy
+relevance
 relevant
 relief
 relieve
@@ -4560,7 +4560,7 @@ luminous
 lunar
 lunatic
 lune
-luster、-tre
+luster
 lustrous
 pellucid
 relucent
@@ -6089,7 +6089,7 @@ compulsion
 compulsory
 dispel
 expel
-expellant、-pellent
+expellant
 expulsion
 expulsive
 impel
@@ -6704,7 +6704,7 @@ preposterous
 empower
 impossibility
 impossible
-impotence、-cy
+impotence
 impotent
 impuissant
 omnipotence
@@ -6715,7 +6715,7 @@ possessive
 possibility
 possible
 possibly
-potence、-cy
+potence
 potent
 potentate
 potential
@@ -6826,7 +6826,7 @@ primary
 prime
 prime minister
 primer
-primeval、primaeval
+primeval
 primitive
 primogenitor
 primogeniture
@@ -7204,7 +7204,7 @@ rigid
 rigidity
 rigidly
 rigorous
-rigor、rigour
+rigor
 royal
 royalty
 rule
@@ -7347,12 +7347,12 @@ exultation
 insult
 insulting
 resile
-resilience、-ency
+resilience
 resilient
 result
 resultant
 resultful
-salience、-ency
+salience
 salient
 sally
 salmon
@@ -7913,7 +7913,7 @@ assist
 assistance
 assistant
 consist
-consistence、-ency
+consistence
 consistent
 desist
 exist
@@ -8126,7 +8126,7 @@ specious
 spectacle
 spectacular
 spectator
-specter、-tre(英）
+specter
 spectrum
 speculate
 speculation
@@ -8190,7 +8190,7 @@ correspondence
 correspondent
 corresponding
 despond
-despondence、-ency
+despondence
 despondent
 espousal
 espouse
@@ -8215,7 +8215,7 @@ circumstance
 circumstantial
 circumstantiate
 consist
-consistence、-ency
+consistence
 consistent
 constable
 constancy
@@ -8269,7 +8269,7 @@ irresistibly
 metastasis
 metastasize
 obstacle
-obstetric、-rica
+obstetric
 obstinacy
 obstinate
 obstinately
@@ -8877,7 +8877,7 @@ territory
 [543]
 attest
 attestation
-attester、-or
+attester
 contest
 contestant
 detest
@@ -8960,7 +8960,7 @@ tolerant
 tolerate
 toleration
 [549]
-anatomic、-cal
+anatomic
 anatomy
 atom
 atomic
@@ -9115,7 +9115,7 @@ distribution
 distributive
 distributor
 retribution
-retributive、-tory
+retributive
 retributory
 tribal
 tribe
@@ -9205,7 +9205,7 @@ turbid
 turbidity
 turbinate
 turbine
-turbulence、-enc
+turbulence
 turbulent
 [565]
 ulterior
@@ -9694,7 +9694,7 @@ advice
 advisable
 advise
 advisement
-adviser、sor
+adviser
 clairvoyance
 clairvoyant
 enviable
