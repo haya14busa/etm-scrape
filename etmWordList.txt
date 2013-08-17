@@ -3488,7 +3488,7 @@ epigrammatic
 epigraph
 geography
 glamorous
-glamour/glamor
+glamour
 grammar
 grammarian
 grammatical
@@ -4600,7 +4600,7 @@ prolusion
 analysis
 analyst
 analytic
-analyze/lyse
+analyze
 catalysis
 catalyst
 catalyzer
