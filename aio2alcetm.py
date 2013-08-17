@@ -47,6 +47,7 @@ def main():
     # NLTK
     stopset = getStopset('english')
     stemmer = stem.LancasterStemmer()
+    pstemmer = stem.PorterStemmer()
     lemmatizer = stem.WordNetLemmatizer()
     # ALC etymology dictionary's base link format
     wlink = "<a href=\"http://home.alc.co.jp/db/owa/etm_sch?unum={num}&stg=2\" target='_blank'>{w}</a>"
@@ -66,7 +67,8 @@ def main():
             # Search lowercase , lemma, stem
             wdoc = searchMongo(db, lword, 'lemma') or \
                    searchMongo(db, lemmatizer.lemmatize(lword), 'lemma') or \
-                   searchMongo(db, stemmer.stem(lword), 'stem')
+                   searchMongo(db, stemmer.stem(lword), 'stem') or \
+                   searchMongo(db, pstemmer.stem(lword), 'stem')
             if wdoc:
                 rsentence.append(wlink.format(num=wdoc['alc_etm']['unum'],w=word))
             else:
@@ -77,7 +79,12 @@ def main():
                     text = ' '.join(rsentence)
                 )
         rsentences.append(sentence_text)
-    print '\n'.join(rsentences)
+    wtext = "<h1>Link from ALL IN ONE to ALC's Online Etymology Dictionary</h1>\n \
+            <dl>{contents}</dl>".format(contents='\n'.join(rsentences))
+
+    f = open('LearnAIObyEtm.html', 'w')
+    f.write(wtext)
+    f.close()
 
 if __name__ == '__main__':
     main()
