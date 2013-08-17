@@ -15,7 +15,6 @@ for i in xrange(9404):
             html = objFile.read()
         finally:
             objFile.close()
-        
         soup = BeautifulSoup(html)
         word = soup.find_all(attrs={"color" : "darkblue"})[0].text
     wordList.append(word)
