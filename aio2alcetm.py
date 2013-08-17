@@ -58,12 +58,12 @@ def main():
         rsentence = [] # result sentence
         print num+1 # for debug
         for word in tokenize.wordpunct_tokenize(sentence):
-            # Continue if word is in stopset
-            if len(word) < 3 or word in stopset:
-                rsentence.append(word)
-                continue
             # Make word lowercase
             lword = word.lower()
+            # Continue if word is in stopset
+            if len(lword) < 3 or lword in stopset:
+                rsentence.append(word)
+                continue
             # Search lowercase , lemma, stem
             wdoc = searchMongo(db, lword, 'lemma') or \
                    searchMongo(db, lemmatizer.lemmatize(lword), 'lemma') or \
@@ -74,13 +74,13 @@ def main():
             else:
                 rsentence.append(word)
 
-        sentence_text = '<dt>{n}</dt><dd><p>{text}</p></dd>\n'.format(
+        sentence_text = "<dt class='aio{n}'>{n}</dt><dd class='aio{n}'><p>{text}</p></dd>\n".format(
                     n    = str(num+1).rjust(3,'0'),
                     text = ' '.join(rsentence)
                 )
         rsentences.append(sentence_text)
     wtext = "<h1>Link from ALL IN ONE to ALC's Online Etymology Dictionary</h1>\n \
-            <dl>{contents}</dl>".format(contents='\n'.join(rsentences))
+            <dl class='aio'>{contents}</dl>".format(contents='\n'.join(rsentences))
 
     f = open('LearnAIObyEtm.html', 'w')
     f.write(wtext)
