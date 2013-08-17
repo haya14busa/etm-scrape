@@ -158,7 +158,7 @@ alumnus
 coalesce
 coalition
 [009]
-alb(s)
+albs
 albata
 albatross
 albescent
@@ -888,7 +888,7 @@ candidate
 candle
 candlelight
 candlestick
-cando(u)r
+candour
 chandelier
 chandler
 chandlery
@@ -1141,7 +1141,7 @@ undercharge
 card
 cardboard
 cardcase
-cardsharp(er)
+cardsharper
 cartel
 cartography
 carton
@@ -1424,7 +1424,7 @@ anachronism
 anachronistic
 chronic
 chronicle
-chronologic(al)
+chronological
 chronology
 chronometer
 chronometry
@@ -4381,7 +4381,7 @@ lingual
 Linguaphone
 linguist
 linguister
-linguistic(al)
+linguistical
 linguistics
 lip
 lipreading
@@ -4451,12 +4451,12 @@ apologize
 apology
 astrology
 biology
-catalog(ue)
+catalogue
 chronology
 dendrochronology
 dialect
 dialectic
-dialog(ue)
+dialogue
 entomology
 epilogue epilog
 etymology
@@ -4471,7 +4471,7 @@ logistics
 logo
 meteorological
 meteorology
-monolog(ue)
+monologue
 mythology
 neology
 paleontology
@@ -4479,7 +4479,7 @@ pathology
 philology
 phrenology
 physiology
-prolog(ue)
+prologue
 psychology
 technology
 theology
@@ -6248,7 +6248,7 @@ philately
 philharmonic
 philology
 philosopher
-philosophic(al)
+philosophical
 philosophist
 philosophy
 philosophy
@@ -7325,7 +7325,7 @@ sacrosanct
 sacrosanctity
 [461]
 salad
-salariat(e)
+salariate
 salaried
 salary
 salary
@@ -9363,7 +9363,7 @@ valid
 validate
 validation
 validity
-valo(u)r
+valour
 valorous
 valuable
 valuation
@@ -9798,7 +9798,7 @@ vegetation
 vigil
 vigilance
 vigilant
-vigo(u)r
+vigour
 vigorous
 vigorously
 [596]
