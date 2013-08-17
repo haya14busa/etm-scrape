@@ -17,6 +17,9 @@ for num in xrange(607):
         objFile.close()
     soup = BeautifulSoup(html)
 
+    etmWlist.append('[{num}]'.format(num=str(num+1).rjust(3,'0')))
+    print num+1 # for debug
+
     for i in xrange(len(soup.find_all(attrs={"color" : "darkblue"}))):
         etmWlist.append(soup.find_all(attrs={"color" : "darkblue"})[i].text) # English
 
