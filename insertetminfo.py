@@ -28,7 +28,7 @@ def connect2mongodb(db):
 
 def searchMongo(dbh, searchword, field):
     # db = connect2mongodb('mydict')
-    return dbh.words.find_one({field:searchword},{'alc_etm.unum':1})
+    return dbh.words.find_one({field:searchword},{'alc_etm.er_sn_in':{"$exists":True}})
 
 def main():
     # Get text
@@ -40,13 +40,20 @@ def main():
     for word in wlist:
         if word[0] == '[':
             etmnum += 1
-            # print etmnum
             continue
         # Search
-        wdoc = searchMongo(db, word, 'eword')
-        if not wdoc:
-            print 'Error occur :' + word + str(etmnum)
+        # wdoc = searchMongo(db, word, 'eword')
+        # if not wdoc:
+        #     print 'Error occur :' + word + str(etmnum)
+        # else:
 
+        try:
+            db.words.update({'eword':word,'alc_etm.er_sn_in':None},
+                        {"$set":{'alc_etm.er_sn_in':etmnum}},
+                        safe=True)
+            print 'Successfully updated:' + word + ' -> ' + str(etmnum)
+        except:
+            print 'Fail to insert er_sn_in:' + word + ' -> ' + str(etmnum)
 
 if __name__ == '__main__':
     main()
