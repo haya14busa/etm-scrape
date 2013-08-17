@@ -96,8 +96,8 @@ reactionary
 reactivate
 reactive
 reactor
-transact  
-transaction  
+transact
+transaction
 [005]
 aerate
 aerial
@@ -185,7 +185,7 @@ allegorical
 allegorize
 allegory
 allergic
-allergy 
+allergy
 allophone
 [012]
 altar
@@ -222,7 +222,7 @@ amateur
 amateurish
 amative
 amatory
-amenity 
+amenity
 amiable
 amicable
 amicably
@@ -232,7 +232,7 @@ amorous
 amorpatriac
 amorpatriae
 amour
-enamor enamour 
+enamor enamour
 enemy
 enmity
 inimical
