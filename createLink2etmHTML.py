@@ -74,11 +74,15 @@ def main():
             else:
                 rsentence.append(word)
 
+        # Sentence format
         sentence_text = "<dt class='sentence{n}'>{n}</dt><dd class='sentence{n}'><p>{text}</p></dd>\n".format(
                     n    = str(num+1).rjust(3,'0'),
                     text = ' '.join(rsentence)
                 )
         rsentences.append(sentence_text)
+
+
+    # Write HTML
     wtext = "<h1>Link from text to ALC's Online Etymology Dictionary</h1>\n \
             <dl class='sentence'>{contents}</dl>".format(contents='\n'.join(rsentences))
 
