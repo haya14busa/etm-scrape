@@ -83,8 +83,7 @@ def main():
 
 
     # Write HTML
-    wtext = "<h1>Link from text to ALC's Online Etymology Dictionary</h1>\n \
-            <dl class='sentence'>{contents}</dl>".format(contents='\n'.join(rsentences))
+    wtext = "<h1>Link from text to ALC's Online Etymology Dictionary</h1>\n<dl class='sentence'>{contents}</dl>".format(contents='\n'.join(rsentences))
 
     f = open('web/index.html', 'w')
     f.write(wtext)
