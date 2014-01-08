@@ -13,18 +13,21 @@ from nltk import stem
 from pymongo import Connection
 from pymongo.errors import ConnectionFailure
 
+import sys
 
 
 def getStopset(lang='english'):
     return set(stopwords.words(lang))
 
+
 def getAIOText(fname):
-    objFile = open(fname,'r')
+    objFile = open(fname, 'r')
     try:
         text = objFile.read()
     finally:
         objFile.close()
     return text.splitlines()
+
 
 def connect2mongodb(db):
     try:
@@ -35,9 +38,11 @@ def connect2mongodb(db):
         sys.exit(1)
     return c[db]
 
+
 def searchMongo(dbh, searchword, field):
     # db = connect2mongodb('mydict')
-    return dbh.words.find_one({field:searchword},{'alc_etm.unum':1})
+    return dbh.words.find_one({field: searchword}, {'alc_etm.unum': 1})
+
 
 def main():
     # Get text
@@ -50,13 +55,14 @@ def main():
     pstemmer = stem.PorterStemmer()
     lemmatizer = stem.WordNetLemmatizer()
     # ALC etymology dictionary's base link format
-    wlink = "<a href=\"http://home.alc.co.jp/db/owa/etm_sch?unum={num}&stg=2\" target='_blank'>{w}</a>"
+    wlink = "<a href=\"http://home.alc.co.jp/db/owa/etm_sch?unum={num}&stg=2\"\
+            target='_blank'>{w}</a>"
     # Prepare for result sentences
     rsentences = []
 
     for num, sentence in enumerate(sentences):
-        rsentence = [] # result sentence
-        print num+1 # for debug
+        rsentence = []  # result sentence
+        print num+1     # for debug
         for word in tokenize.wordpunct_tokenize(sentence):
             # Make word lowercase
             lword = word.lower()
@@ -66,21 +72,23 @@ def main():
                 continue
             # Search lowercase , lemma, stem
             wdoc = searchMongo(db, lword, 'lemma') or \
-                   searchMongo(db, lemmatizer.lemmatize(lword), 'lemma') or \
-                   searchMongo(db, stemmer.stem(lword), 'stem') or \
-                   searchMongo(db, pstemmer.stem(lword), 'stem')
+                searchMongo(db, lemmatizer.lemmatize(lword), 'lemma') or \
+                searchMongo(db, stemmer.stem(lword), 'stem') or \
+                searchMongo(db, pstemmer.stem(lword), 'stem')
             if wdoc:
-                rsentence.append(wlink.format(num=wdoc['alc_etm']['unum'],w=word))
+                rsentence.append(wlink.format(
+                    num=wdoc['alc_etm']['unum'], w=word))
             else:
                 rsentence.append(word)
 
-        sentence_text = "<dt class='aio{n}'>{n}</dt><dd class='aio{n}'><p>{text}</p></dd>\n".format(
-                    n    = str(num+1).rjust(3,'0'),
-                    text = ' '.join(rsentence)
-                )
+        sentence_text = "<dt class='aio{n}'>{n}</dt>\
+                <dd class='aio{n}'><p>{text}</p></dd>\n".format(
+            n=str(num+1).rjust(3, '0'),
+            text=' '.join(rsentence))
         rsentences.append(sentence_text)
-    wtext = "<h1>Link from ALL IN ONE to ALC's Online Etymology Dictionary</h1>\n \
-            <dl class='aio'>{contents}</dl>".format(contents='\n'.join(rsentences))
+    wtext = \
+        "<h1>Link from ALL IN ONE to ALC's Online Etymology Dictionary</h1>\n \
+        <dl class='aio'>{contents}</dl>".format(contents='\n'.join(rsentences))
 
     f = open('LearnAIObyEtm.html', 'w')
     f.write(wtext)

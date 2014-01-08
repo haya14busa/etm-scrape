@@ -13,6 +13,7 @@ import sys
 from pymongo import Connection
 from pymongo.errors import ConnectionFailure
 
+
 def connect2mongodb(db):
     try:
         c = Connection(host="localhost", port=27017)
@@ -22,6 +23,7 @@ def connect2mongodb(db):
         sys.exit(1)
     return c[db]
 
+
 def main():
     db = connect2mongodb('mydict')
 
@@ -30,7 +32,7 @@ def main():
     #         {'$set':{'alc_etm.er_sn_in':1}}, safe=True)
     # print 'new: ', db.words.find_one({'eword':'acerbic'})
     for word in db.words.find():
-        db.words.update(word,{'$inc':{'alc_etm.unum':true}})
+        db.words.update(word, {'$inc': {'alc_etm.unum': 'true'}})
 
 
 if __name__ == '__main__':

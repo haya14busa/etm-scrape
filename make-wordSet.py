@@ -1,4 +1,4 @@
-objFile = open('wordList.txt','r')
+objFile = open('wordList.txt', 'r')
 try:
     text = objFile.read()
 finally:

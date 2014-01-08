@@ -16,6 +16,7 @@ from pymongo.errors import ConnectionFailure
 # NLTK
 from nltk import stem
 
+
 def connect2mongodb(db):
     try:
         c = Connection(host="localhost", port=27017)
@@ -25,13 +26,15 @@ def connect2mongodb(db):
         sys.exit(1)
     return c[db]
 
+
 def getWordsList():
-    objFile = open('wordList.txt','r')
+    objFile = open('wordList.txt', 'r')
     try:
         text = objFile.read()
     finally:
         objFile.close()
     return text.splitlines()
+
 
 def getWordDocList():
     words = getWordsList()
@@ -41,24 +44,25 @@ def getWordDocList():
 
     doclist = []
     for num, word in enumerate(words):
-        lword  = word.lower()
+        lword = word.lower()
         lmword = lemmatizer.lemmatize(lword)
         stword = stemmer.stem(lword)
 
         word_doc = {
-                'eword'    : word,
-                'alc_etm'  : {
-                                'unum'     : num+1,
-                                'er_sn_in' : None
-                             },
-                'lemma'    : lmword,
-                'stem'     : stword,
-                'from'     : 'alc_etm',
-                'created_at'     : datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            'eword': word,
+            'alc_etm': {
+                'unum': num+1,
+                'er_sn_in': None
+                },
+            'lemma': lmword,
+            'stem': stword,
+            'from': 'alc_etm',
+            'created_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
         doclist.append(word_doc)
         print num
     return doclist
+
 
 def main():
     db = connect2mongodb('mydict')

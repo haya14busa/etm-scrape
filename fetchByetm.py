@@ -9,4 +9,3 @@ for i in xrange(607):
     f = open(fname, "w")
     f.write(html)
     f.close()
-

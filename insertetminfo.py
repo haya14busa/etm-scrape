@@ -9,13 +9,17 @@
 from pymongo import Connection
 from pymongo.errors import ConnectionFailure
 
+import sys
+
+
 def getFile(fname):
-    objFile = open(fname,'r')
+    objFile = open(fname, 'r')
     try:
         text = objFile.read()
     finally:
         objFile.close()
     return text.splitlines()
+
 
 def connect2mongodb(db):
     try:
@@ -26,9 +30,12 @@ def connect2mongodb(db):
         sys.exit(1)
     return c[db]
 
+
 def searchMongo(dbh, searchword, field):
     # db = connect2mongodb('mydict')
-    return dbh.words.find_one({field:searchword},{'alc_etm.er_sn_in':{"$exists":True}})
+    return dbh.words.find_one({field: searchword},
+                              {'alc_etm.er_sn_in': {"$exists": True}})
+
 
 def main():
     # Get text
@@ -48,10 +55,10 @@ def main():
         # else:
 
         try:
-            db.words.update({'eword':word,'alc_etm.er_sn_in':None},
-                        {"$set":{'alc_etm.er_sn_in':etmnum}},
-                        safe=True)
-            print 'Successfully updated:' + word + ' -> ' + str(etmnum)
+            db.words.update({'eword': word, 'alc_etm.er_sn_in': None},
+                            {"$set": {'alc_etm.er_sn_in': etmnum}},
+                            safe=True)
+            print 'Successfully updated: ' + word + ' -> ' + str(etmnum)
         except:
             print 'Fail to insert er_sn_in:' + word + ' -> ' + str(etmnum)
 

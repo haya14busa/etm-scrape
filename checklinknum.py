@@ -12,13 +12,17 @@ import re
 from pymongo import Connection
 from pymongo.errors import ConnectionFailure
 
+import sys
+
+
 def getFile(fname):
-    objFile = open(fname,'r')
+    objFile = open(fname, 'r')
     try:
         text = objFile.read()
     finally:
         objFile.close()
     return text
+
 
 def connect2mongodb(db):
     try:
@@ -29,16 +33,16 @@ def connect2mongodb(db):
         sys.exit(1)
     return c[db]
 
+
 def main():
     # Get text
     html = getFile('LearnAIObyEtm.html')
     soup = BeautifulSoup(html)
 
-
     linklist = soup.findAll('a')
     unumSet = set()
     for link in linklist:
-        unumSet.add(re.search('\d+',link.attrs['href']).group(0))
+        unumSet.add(re.search('\d+', link.attrs['href']).group(0))
     # print unumSet
 
     # MongoDB
@@ -46,11 +50,11 @@ def main():
 
     er_sn_inSet = set()
     for unum in unumSet:
-        er_sn_in = db.words.find_one({'alc_etm.unum':int(unum)})['alc_etm']['er_sn_in']
+        er_sn_in = db.words.find_one(
+            {'alc_etm.unum': int(unum)})['alc_etm']['er_sn_in']
         er_sn_inSet.add(er_sn_in)
-    print 'the number of words : ' , len(unumSet)
-    print 'the number of etm   : ' , len(er_sn_inSet)
-
+    print 'the number of words : ', len(unumSet)
+    print 'the number of etm   : ', len(er_sn_inSet)
 
 
 if __name__ == '__main__':
